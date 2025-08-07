@@ -1,0 +1,16 @@
+import random
+import string
+
+def generateRandomString(length):
+    '''
+    Return an unpredictable random string that has only ASCII letters with a fixed size equals to length.
+    '''
+    # Use string.ascii_letters to get a string of all ASCII letters (both lowercase and uppercase)
+    letters = string.ascii_letters
+    # Use random.choices to select 'length' number of characters from 'letters'
+    random_string = ''.join(random.choices(letters, k=length))
+    return random_string
+
+# Example usage:
+random_string = generateRandomString(10)
+print(random_string)
